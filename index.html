@@ -1,106 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
 	<title>Home</title>
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<link rel="shortcut icon" type="text/css" href="images/favicon.ico">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Custom Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<!-- Bootstrap CDNs -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	<!-- Sweet Alert CDNs -->
+	<script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script><!--  <- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+	<!-- is.js CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
+	<!-- Animate.CSS -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">	
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<style type="text/css">
+		.custom-sidenav{
+			height: 100vh;
+			position: fixed;
+			z-index: 1;
+		}
+		.jumbotron{
+			padding-top: 0px;
+		}
+		@media screen and (min-width: 768px){
+		.jumbotron {
+		    padding-top: 0px; 
+		    padding-bottom: 0px;
+		}
+		.custom-transparent{
+		  background: rgba(200, 200, 200, 0.5);
+		}
+	}
+	</style>
 </head>
-<body>
+<body style="background-color: #333">
 
-	<!--************************ NAVBAR ************************-->
 
-	<div class="navbar">
-		<h1>
-			Callum's Portfolio
-		</h1>
-		<div>
-			<a href="index.html">Home</a>
-			<a href="about.html">About</a>
-			<a href="references.html">References</a>
-			<a href="showcase.html">Showcase</a>
-			<a href="google-maps.html">Maps</a>
+	<!-- NAVBAR -->
+
+
+	<nav class="navbar-default navbar-fixed-top">
+		<div class="container-fluid" style="padding-left: 0px;padding-right: 0px;">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html">
+					<img src="images/silver-fern.jpg" alt="silver-fern-by-david-gibson" style="max-height: 50px;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html" id="active">Home</a></li>
+					<li><a href="history.html" id="inactA">NZ History</a></li>
+					<li><a href="main-attractions.html" id="inactB">Main Attractions</a></li>
+					<li><a href="upcoming-events.html" id="inactC">Upcoming Events</a></li>
+					<li><a href="contact.html" id="inactD">Contact</a></li>
+				</ul>
+			</div>
 		</div>
-		<hr>
-	</div>
+	</nav>
 
-	<!--************************ MAIN BODY ************************-->
-
-	<div class="main-body">
-
-		<div class="container">
-
-			<h2>Home</h2> 	 <!-- SOME IMAGES HAVE A WEIRD TAG ON THE RIGHT SIDE -->
-			<a href="http://orig00.deviantart.net/095c/f/2015/351/7/0/league_of_legends_fan_art___tahm_kench_retreat___by_benlo-d9ki3br.jpg">
-				<figure>
-					<img alt="league-of-legends" src="http://orig00.deviantart.net/095c/f/2015/351/7/0/league_of_legends_fan_art___tahm_kench_retreat___by_benlo-d9ki3br.jpg" width="480" height="270">
-					<figcaption><div>Art by DeviantArt user Benlo</div></figcaption>
-				</figure>
-			</a>
-
-			<a class="home-img-center" href="https://i0.wp.com/www.gamerselixir.com/wp-content/uploads/2015/12/Defense.png">
-				<figure>
-					<img alt="warframe" src="https://i0.wp.com/www.gamerselixir.com/wp-content/uploads/2015/12/Defense.png" width="480" height="270">
-					<figcaption>Art by the Official Warframe Art Team</figcaption>
-				</figure>
-			</a>
-
-			<a class="home-img-right" href="http://www.gamefocus.ca/images/Games/F/For_Honor/for_honor_title.jpg">
-				<figure>
-					<img alt="for-honor" src="http://www.gamefocus.ca/images/Games/F/For_Honor/for_honor_title.jpg" width="480" height="270">
-					<figcaption>Art by the Official For Honor Art Team</figcaption>
-				</figure>
-			</a>
-		</div>
-
-
-		<div class="container">
-			<a href="http://i.imgur.com/dLmgEhI.png">
-				<figure>
-					<img alt="osu!" src="http://i.imgur.com/dLmgEhI.png" width="480" height="270">
-					<figcaption>Art by Imgur User SuperSaiyanSandwich</figcaption>
-				</figure>
-			</a>
-
-			<a class="home-img-center" href="images/Darksign.jpg">
-				<figure>
-					<img alt="darksign" src="http://www.thevideogamegallery.com/data/thumbs/790px/0001/tVGG_1663.jpg" width="480" height="270">
-					<figcaption>Art by Reuben Olson</figcaption>
-				</figure>
-			</a>
-
-			<a class="home-img-right" href="http://vignette2.wikia.nocookie.net/subnautica/images/5/55/Concept-art-crashed-ship-by-cory-strader-the-art-of-subnautica.jpg/revision/20150517232837">
-				<figure>
-					<img alt="subnautica" src="http://vignette2.wikia.nocookie.net/subnautica/images/5/55/Concept-art-crashed-ship-by-cory-strader-the-art-of-subnautica.jpg/revision/20150517232837" width="480" height="270">
-					<figcaption>Art by the Official Subnautica Art Team</figcaption>
-				</figure>
-			</a>
-		</div>
-
-
-		<div class="footnotes">
-			<h3>Above are some images of my current favourite games, and my handles for them are below</h3>
-			League of Legends: Goatie
-			<br>
-			Warframe: goat1e
-			<br>
-			For Honor: goat1e
-			<br>
-			osu!: Goatie
-			<br>
-			Steam: goat1e
+	<div class="container-fluid text-center bodyContent">
+		<div class="row">
+			<div class="col-sm-3 custom-sidenav custom-transparent  animated fadeInLeft" style=" height: 95px;">
+				<h4 class="questrial" style="font-size: 40px;">Tēnā koe</h4>
+			</div>
 		</div>
 	</div>
 
-	<!--************************ FOOTER ************************-->
 
-	<footer>
-		<hr>
-		<p>
-			Personal Email - CK025@hotmail.com
-			<br>
-			Academic Email - CK025@visioncollege.ac.nz
-		</p>
-	</footer>
+	<!-- MAIN CONTENT -->
+	<div class="jumbotron jumboContainer animated fadeIn" id="jumboCont">
+		<img class="" style="background-size: cover; max-height: 1080px;width: 100%" src="image/milford-sound.jpg" alt="milford-sound.jpg" id="jumboImg">		
+	</div>
+
+
+	<!-- CHECK IF IE/EDGE -->
+	<script type="text/javascript">
+		var checkIE = is.ie();
+		var checkEdge = is.edge();
+
+		if (checkIE === true || checkEdge === true) {
+			jumboImg.src = "images/milford-sound.png";
+		}
+		else{
+			jumboImg.src = "images/milford-sound.jpg";
+		}
+	</script>
+
+	<!-- STYLE ACTIVE BUTTON -->
+	<script type="text/javascript">
+		document.getElementById("active").style.color = "mediumseagreen";
+		/*document.getElementById('inactA').style.color = "seagreen";
+		document.getElementById('inactB').style.color = "seagreen";
+		document.getElementById('inactC').style.color = "seagreen";
+		document.getElementById('inactD').style.color = "seagreen";*/
+	</script>
 </body>
 </html>

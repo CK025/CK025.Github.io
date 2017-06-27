@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Custom Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<!-- Bootstrap CDNs -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	<!-- Sweet Alert CDNs -->
+	<script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script><!--  <- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+	<!-- is.js CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
+	<!-- Animate.CSS -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">	
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+
+	<!-- NAVBAR -->
+
+
+	<nav class="navbar-default navbar-fixed-top">
+		<div class="container-fluid" style="padding-left: 0px;padding-right: 0px;">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html">
+					<img src="images/silver-fern.jpg" alt="silver-fern-by-david-gibson" style="max-height: 50px;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html" id="inactA">Home</a></li>
+					<li><a href="history.html" id="inactB">NZ History</a></li>
+					<li><a href="main-attractions.html" id="inactC">Main Attractions</a></li>
+					<li><a href="upcoming-events.html" id="inactD">Upcoming Events</a></li>
+					<li class="active"><a href="contact.html" id="active">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- MAIN CONTENT -->
+
+	<div class="container-fluid text-center bodyContent animated fadeIn" id="container" style="background-image: url('images/kingstown.jpg');height: 100vh;min-height: 550px;">
+		<div class="row content" id="row-cont">
+
+			<div class="col-sm-3">
+				<!-- Padding -->
+			</div>
+
+			<div class="col-sm-6 text-left custom-transparent">
+				<h2>Contact</h2>
+				<h4>If you wish to directly contact me, please enter your full name, a valid email address, and any comments you wish to make.</h4>
+				<form id="form" action="https://formspree.io/ck025@hotmail.com" method="post" enctype="text/plain">
+					<div class="form-group">
+						<label for="txtName">Name:</label>
+						<input type="text" class="form-control" id="txtName" name="Name: ">
+					</div>
+					<div class="form-group">
+						<label for="txtEmail">Email:</label>
+						<input type="text" class="form-control" id="txtEmail" name="Email: ">
+					</div>
+					<div class="form-group">
+						<label for="comment">Comment:</label>
+						<textarea class="form-control" rows="5" id="comment" name="Comment: "></textarea>
+					</div>
+
+					<div class="form-group">
+						<input type="button" class="btn" value="Submit" name="btnSubmit" onclick="validate()">
+					</div>
+				</form>
+			</div>
+
+			<div class="col-sm-3">
+				<!-- Padding -->
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer" class="container-fluid">
+		<p>Created by Callum Keogh</p>
+	</footer>
+
+	<!-- VALIDATION -->
+
+	<script type="text/javascript">
+		
+		function validate(){
+
+			var name = document.getElementById('txtName').value;
+			var email = document.getElementById('txtEmail').value;
+			var message = document.getElementById('comment').value;
+
+			var checkName = name.indexOf(' ');
+			var checkAt = email.indexOf('@');
+			var checkStop = email.indexOf('.');
+			var checkMessage = message.length;
+
+			if (checkName < 0 && checkAt < 0 ||checkName < 0 && checkStop < 0) {
+				swal(
+					'Error',
+					'Please enter your full name and a valid email address',
+					'error'
+					).catch(swal.noop);
+			}
+
+			else if (checkName < 0) {
+				swal(
+					'Error',
+					'Please enter your full name',
+					'error'
+					).catch(swal.noop);
+			}
+
+			else if (checkStop < 0 || checkAt < 0) {
+				swal(
+					'Error',
+					'Please enter a valid email address',
+					'error'
+					).catch(swal.noop);
+			}
+
+			else if (checkMessage < 1) {
+					swal(
+						'Error',
+						'Please enter a message',
+						'error'
+						).catch(swal.noop);
+				}
+
+			else{
+				/*document.forms["form"].submit();*/
+				swal(
+					'Alert!',
+					'This function of my website has been disabled due to it not being web-hosted.',
+					'warning').catch(swal.noop);
+			}
+		}
+	</script>
+
+	<!-- ADJUST PADDING -->
+
+	<script type="text/javascript">
+	var contHeight = document.getElementById("container").style;
+	var rowCont;
+	var rowValue;
+
+	var windowHeight = window.innerHeight;
+	var footerHeight = document.getElementById("footer").clientHeight;
+
+	windowHeight -= footerHeight;
+
+
+	if (windowHeight > 600) {
+		rowValue = windowHeight / 4;
+		 contHeight = windowHeight + "px";
+		 rowCont = document.getElementById("row-cont").style.paddingTop = rowValue + "px";
+		 console.log(windowHeight,rowCont);
+
+		 window.addEventListener("resize", function(event){
+		 	windowHeight = window.innerHeight;
+		 	console.log(windowHeight);
+		 	if (windowHeight < 750) {
+		 		rowCont = document.getElementById("row-cont").style.paddingTop = "25px";
+		 		contHeight.height = "100vh";
+		 		contHeight.maxHeight = "600px;";
+		 	}
+
+		 	else if (windowHeight > 800) {
+		 		rowValue = windowHeight / 4;
+		 		 contHeight = windowHeight + "px";
+		 		 rowCont = document.getElementById("row-cont").style.paddingTop = rowValue + "px";
+		 	}
+		   
+		 });
+	}
+	else{
+		rowCont = document.getElementById("row-cont").style.paddingTop = "25px";
+		contHeight.height = "100vh";
+		contHeight.maxHeight = "600px;";
+
+	}
+		document.getElementById("active").style.color = "mediumseagreen";
+		/*document.getElementById('inactA').style.color = "seagreen";
+		document.getElementById('inactB').style.color = "seagreen";
+		document.getElementById('inactC').style.color = "seagreen";
+		document.getElementById('inactD').style.color = "seagreen";*/
+	</script>
+</body>
+</html>

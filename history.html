@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>History</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Custom Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<!-- Bootstrap CDNs -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	<!-- Sweet Alert CDNs -->
+	<script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script><!--  <- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+	<!-- is.js CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
+	<!-- Animate.CSS -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">	
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+
+	<!-- NAVBAR -->
+
+
+	<nav class="navbar-default navbar-fixed-top">
+		<div class="container-fluid" style="padding-left: 0px;padding-right: 0px;">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html">
+					<img src="images/silver-fern.jpg" alt="silver-fern-by-david-gibson" style="max-height: 50px;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html" id="inactA">Home</a></li>
+					<li class="active"><a href="history.html" id="active">NZ History</a></li>
+					<li><a href="main-attractions.html" id="inactB">Main Attractions</a></li>
+					<li><a href="upcoming-events.html" id="inactC">Upcoming Events</a></li>
+					<li><a href="contact.html" id="inactD">Contact</a></li>
+				</ul>			
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- MAIN CONTENT -->
+
+	<div class="jumbotron jumboContainer animated fadeIn" id="jumboCont">
+		<img style="background-size: cover;position: relative; width: 100%;" src="images/new-zealand-scenery.jpg" alt="new-zealand-scenery.jpg" id="jumboImg">
+	</div>
+
+	<div class="container-fluid text-center bodyContent">
+		<div class="row content">
+			
+			<div class="col-sm-8 col-sm-offset-2 text-left">
+				<h1>History Page</h1>
+				<br>
+
+
+				<!-- IMAGES -->
+				<div class="col-sm-12 gallery">
+					<a class="col-sm-4" href="#" data-toggle="modal" data-target="#poly-modal">
+
+						<img class="img-responsive center-block" style="width: 400px;" src="images/polynesian-settlement.jpg" alt="polynesian-settlement.jpg">
+						<div class="desc">
+							<div class="desc-cont"> Polynesian Settlement</div>
+						</div>
+
+					</a>
+
+					<a class="col-sm-4" href="#" data-toggle="modal" data-target="#european-modal">
+						<img class="img-responsive center-block " style="width: 400px;" src="images/european-settlement.jpg" alt="european-settlement.jpg">
+						<div class="desc">
+							<div class="desc-cont"> European Settlement</div>
+						</div>
+					</a>
+
+					<a class="col-sm-4" href="#" data-toggle="modal" data-target="#colonial-modal">
+						<img class="img-responsive center-block" style="width: 400px;" src="images/colonial-period.jpg" alt="polynesian-settlement.jpg">
+						<div class="desc">
+							<div class="desc-cont"> Colonial Period</div>
+						</div>
+					</a>
+
+				</div>
+			</div>
+			<div class="col-sm-2"></div>
+
+			<div class="col-sm-8 col-sm-offset-2 text-left" style="padding-bottom: 30px;">
+				<div class="col-sm-12 gallery" style="padding-top: 20px;">
+					<a class="col-sm-6" href="#" data-toggle="modal" data-target="#waitangi-modal">
+						<img class="img-responsive center-block" style="width: 100%;" src="images/waitangi-treaty.jpg" alt="waitangi-treaty.jpg">
+						<div class="desc">
+							<div class="desc-cont"> Treaty of Waitangi</div>
+						</div>
+					</a>
+					<a class="col-sm-6" href="#" data-toggle="modal" data-target="#modern-modal">
+						<img class="img-responsive center-block" style=" width: 100%" src="images/19-21.jpg" alt="19-21-century.jpg">
+						<div class="desc">
+							<div class="desc-cont"> 19th-21st Century</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-2"></div>
+
+		</div>
+
+
+		<!-- POLYNESIAN MODAL -->
+		<div class="modal fade" id="poly-modal" role="dialog">
+			<div class="modal-dialog">
+				<!-- MODAL CONTENT -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title questrial">Polynesian Foundation ~(1000-1500)</h2>
+					</div>
+					<div class="modal-body">
+						<h3 class="questrial">Polynesian Settlers ~(1000-1280)</h3>
+						<hr>
+						<p class="questrial">According to the Māori the first polynesian to land on New Zealand was a man named Kupe (a Polynesian explorer) around the year 1000, however to date the oldest piece of evidence found suggests that the Polynesians landed some time closer to the year 1280.</p>
+
+						<h3 class="questrial">Game Extinction ~(1300-1500)</h3>
+						<hr>
+						<p class="questrial">The Polynesians (now named the Māori) had hunted various large game like the moa, to the point of extinction. As a result of the reduced population of local game they adapted horticulture to support their population.</p>
+
+						<h3 class="questrial">Moriori Tribe (~1500)</h3>
+						<hr>
+						<p class="questrial">The Moriori tribe is believed to have been created around the year 1500 and were descendants of the Māori. They traveled to the east and chose the Chatam Islands as their home.</p>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- EUROPEAN MODAL -->
+		<div class="modal fade" id="european-modal" role="dialog">
+			<div class="modal-dialog">
+				<!-- MODAL CONTENT -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title questrial">European Exploration & Settlement (1642-1800's)</h2>
+					</div>
+					<div class="modal-body">
+						<h3 class="questrial">Abel Tasman (1642-1645)</h3>
+						<hr>
+						<p class="questrial">In 1642 Abel Tasman discovers New Zealand and names it Nieuw Zeeland. When documenting the island his ships were spotted by the Māori and was stalked by 4 groups of them. After some time they tried to scare away Abel's crew, but a misunderstanding caused them to believe they wanted to fight. The Māori left and returned the next day to challenge them again, and Abel misunderstood them yet again believing they sought friendship. Abel decided to move his ships inland to befriend the Māori, but was instead boarded where 4 of his men were killed and another was captured. Abel immediatley left after this encounter. In 1645 Dutch cartographers rename Nieuw Zeeland to Nova Zeelandia.</p>
+
+						<h3 class="questrial">James Cook (1769-1780)</h3>
+						<hr>
+						<p class="questrial">In 1769 James Cook changed the name of Nova Zeelandia to New Zealand and over a year visited it twice. In 1780 James Cook was killed in Hawaii.</p>
+
+						<h3 class="questrial">European Visitors (1790-1800's)</h3>
+						<hr>
+						<p class="questrial">In 1790 American, French, and British ships began trading with the Māori. In the 18th century Christian missionaries began settling in New Zealand in an attempt to convert the Māori and control the lawless Europeans that had settled.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>		
+
+		<!-- COLONIAL MODAL -->
+		<div class="modal fade" id="colonial-modal" role="dialog">
+			<div class="modal-dialog">
+				<!-- MODAL CONTENT -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title questrial">Colonial Period (1805-1872)</h2>
+					</div>
+					<div class="modal-body">
+						<h3 class="questrial">Trading & War</h3>
+						<hr>
+						<p class="questrial">The continuous trading between certain Māori tribes and the American/French/British, meant that those tribes amassed more advanced tools and technology, including muskets. The muskets in circulation within the Māori tribes caused a massive power struggle known as the Musket Wars. Tribes with muskets would slaughter and enslave tribes without them. This war in combination with foreign diseases that the Māori has no immunity to caused a significant decrease in Māori population. In 1835 the Moriori tribe is nearly exterminated.</p>
+
+						<h3 class="questrial">Second-Wave Settlers & Getting Somewhere (1831-1881)</h3>
+						<hr>
+						<p class="questrial">Over the course of 50 years the European population of New Zealand exploded from ~1000 in 1831 to over 500,000 by 1881. In 1841 New Zealand officially seperated from the Australian colony becoming a standalone colony. On the 30th of June 1852 New Zealand was officially granted a self goverment by the Royal Crown. In 1877 the Education Act of 1877 was created, making education mandatory for children aged 5-15.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- WAITANGI MODAL -->
+		<div class="modal fade" id="waitangi-modal" role="dialog">
+			<div class="modal-dialog">
+				<!-- MODAL CONTENT -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title questrial">The Treaty of Waitangi (1840)</h2>
+					</div>
+					<div class="modal-body">
+						<h3 class="questrial">Drafting & Signing</h3>
+						<hr>
+						<p class="questrial">The Treaty of Waitangi was drafted and initially signed by 43 chiefs on the 6th February 1840 in the Bay of Islands. Over the next 8 months another 500 chiefs would come to sign it.</p>
+
+						<h3 class="questrial">Contents</h3>
+						<hr>
+						<p class="questrial">The contents of the Treaty have significant difference depending on the version due to mistranslations. The English version states that the British Crown is given sovereignty over New Zealand and in return the Māori are given sovereignty over their lands and possessions, and are granted all of the rights of British citizens. Whereas the the Māori localisation states that the Crown is given <a href="https://en.wikipedia.org/wiki/Kawanatanga">kawanatanga</a>, a lesser form of governorship.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 19/20/21 CENTURY MODAL -->
+		<div class="modal fade" id="modern-modal" role="dialog">
+			<div class="modal-dialog">
+				<!-- MODAL CONTENT -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title questrial">Late 19th-21st Century</h2>
+					</div>
+					<div class="modal-body">
+						<h3 class="questrial">A Bustling Economy & Politics (1882-1891)</h3>
+						<hr>
+						<p class="questrial">In 1882 following the invention of refrigerated steamships New Zealand's economy vastly expanded through the exports of wool, cheese, butter and frozen beef & mutton. At the time New Zealand was thought to have the highest standard of living for the time period due to it's low number of vastly poor/rich people. In 1891 the liberal government enacted a policy called Populism, giving political power to a large number of lower class land owners, removing New Zealand from a government resembling an aristocracy.</p>
+
+						<h3 class="questrial">Equality (1893-1909)</h3>
+						<hr>
+						<p class="questrial">In 1893 voting rights were extended to women, making New Zealand the first country globally to enact universal female suffrage. In 1909 the Native Land Act is created allowing the Māori to privately sell their land to whoever they wish.</p>
+
+						<h3 class="questrial">Still Going Strong (1911)</h3>
+						<hr>
+						<p class="questrial">New Zealand's population reaches over 1,000,000.</p>
+
+						<h3 class="questrial">Lean,Green and Nuclear Free (1987)</h3>
+						<hr>
+						<p class="questrial">In 1987 New Zealand adopted a nuclear-free policy, effectively withdrawing from the ANZUS alliance.</p>
+
+						<h3 class="questrial">Still Buddies (2001-2010)</h3>
+						<hr>
+						<p class="questrial">New Zealand has kept close relations to both the British Crown and the United States following their assistance during the Second World War. New Zealand provided support in both the Iraq and Afganistan wars varying from combat troops to engineering & medical units.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="container-fluid">
+		<p>Created by Callum Keogh</p>
+	</footer>
+
+	<!-- ANIMATE JUMBOTRON -->
+	<script>
+		var scrollTop;
+		var jumboTron = document.getElementById("jumboCont");
+		var hidden = false;
+		window.addEventListener("scroll", function(){
+			scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+			if (scrollTop >=500) {
+				jumboCont.classList.add("fadeOut");
+				hidden = true;
+			}
+			else if (hidden === true && scrollTop < 500) {
+				jumboCont.classList.remove("fadeOut");
+				jumboCont.classList.add("fadeIn");
+			}
+		}, false);
+	</script>
+
+	<!-- STYLE ACTIVE BUTTON -->
+	<script type="text/javascript">
+		document.getElementById("active").style.color = "mediumseagreen";
+		/*document.getElementById('inactA').style.color = "seagreen";
+		document.getElementById('inactB').style.color = "seagreen";
+		document.getElementById('inactC').style.color = "seagreen";
+		document.getElementById('inactD').style.color = "seagreen";*/
+	</script>
+</body>
+</html>
